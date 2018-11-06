@@ -5,8 +5,13 @@ from PyQt5.QtCore import QCoreApplication, QThread, pyqtSignal, QSettings
 from mainwindow import Ui_MainWindow
 
 import time
+
+#TODO: delete this hack later
+with open("settings.py", "w") as f:
+    f.write("")
+
 from market_maker import bitmex
-# import res
+
 
 
 class Thread(QThread):
