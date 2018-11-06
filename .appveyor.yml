@@ -1,0 +1,24 @@
+clone_depth: 2
+
+environment:
+    matrix:
+        - PYTHON: "C:\\Python37"
+          ARCH: "32"
+        - PYTHON: "C:\\Python37-x64"
+          ARCH: "64"
+
+init:
+
+install:
+    - "%PYTHON%\\python.exe --version"
+    - "%PYTHON%\\Scripts\\pip install pyinstaller"
+    - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py"
+    - "move dist\\bmbot.exe dist\\bmbot%ARCH%.exe"
+
+build: off
+
+artifacts:
+    - path: "dist\\bmbot.exe"
+    - path: "dist\\bmbot%ARCH%.exe"
+    - path: "dist\\bmbot32.exe"
+    - path: "dist\\bmbot64.exe"
