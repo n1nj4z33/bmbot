@@ -11,14 +11,11 @@ init:
 
 install:
     - "%PYTHON%\\python.exe --version"
-    - "%PYTHON%\\Scripts\\pip install pyinstaller"
+    - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5 pyqt5-tools"
     - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py"
-    - "move dist\\bmbot.exe dist\\bmbot%ARCH%.exe"
+    - "move dist\\bmbot.exe dist\\bmbot_x%ARCH%.exe"
 
 build: off
 
 artifacts:
-    - path: "dist\\bmbot.exe"
-    - path: "dist\\bmbot%ARCH%.exe"
-    - path: "dist\\bmbot32.exe"
-    - path: "dist\\bmbot64.exe"
+    - path: "dist\\bmbot_x%ARCH%.exe"
