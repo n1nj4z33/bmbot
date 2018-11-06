@@ -26,7 +26,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: VOVRN/x5Ulzxx+UehdUVKchl0vbb7A6NZDxQNbJHytIZmRSuP1sbGAdGP17d/wwu
-  artifact: dist\\bmbot-%ARCH%.exe
+  artifact: dist\bmbot-%ARCH%.exe
   draft: false
   prerelease: false
   on:
