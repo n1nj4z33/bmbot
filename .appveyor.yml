@@ -25,7 +25,7 @@ deploy:
   description: 'Release new version'
   provider: GitHub
   auth_token:
-    secure: 2943dc9e7c060b49aed957794f9825b194dc7aef
+    secure: 1YyrSgXbhoJlAl16fNsojV3f0aYToi5kUE+N/ZH1seV8G20gIFt23/lMzLtr/gCq
   artifact: dist\\bmbot-%ARCH%.exe
   draft: false
   prerelease: false
