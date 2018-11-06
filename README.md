@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/n1nj4z33/bmbot.svg?branch=master)](https://travis-ci.org/n1nj4z33/bmbot)
 # bmbot
 - Скачиваешь python 3 https://www.python.org/downloads/
 - pip3 install PyQt5
