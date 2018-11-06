@@ -5,4 +5,4 @@ dist: xenial
 install:
   - pip install pyinstaller
 script:
-  - pytest
+  - python -v
