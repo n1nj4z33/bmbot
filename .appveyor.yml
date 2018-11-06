@@ -5,7 +5,7 @@ environment:
 #         - PYTHON: "C:\\Python37"
 #           ARCH: "32"
         - PYTHON: "C:\\Python37-x64"
-          ARCH: "64"
+          ARCH: "x64"
 
 init:
 
@@ -13,9 +13,21 @@ install:
     - "%PYTHON%\\python.exe --version"
     - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5 pyqt5-tools bitmex-market-maker"
     - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico bmbot.py"
-    - "move dist\\bmbot.exe dist\\bmbot_x%ARCH%.exe"
+    - "move dist\\bmbot.exe dist\\bmbot-%ARCH%.exe"
 
 build: off
 
 artifacts:
-    - path: "dist\\bmbot_x%ARCH%.exe"
+    - path: "dist\\bmbot-%ARCH%.exe"
+
+deploy:
+  release: bmbot-v$(appveyor_build_version)
+  description: 'Release new version'
+  provider: GitHub
+  auth_token:
+    secure: 2943dc9e7c060b49aed957794f9825b194dc7aef
+  artifact: dist\\bmbot-%ARCH%.exe
+  draft: false
+  prerelease: false
+  on:
+    branch: master
