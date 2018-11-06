@@ -2,8 +2,8 @@ clone_depth: 2
 
 environment:
     matrix:
-        - PYTHON: "C:\\Python37"
-          ARCH: "32"
+#         - PYTHON: "C:\\Python37"
+#           ARCH: "32"
         - PYTHON: "C:\\Python37-x64"
           ARCH: "64"
 
@@ -12,7 +12,7 @@ init:
 install:
     - "%PYTHON%\\python.exe --version"
     - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5 pyqt5-tools bitmex-market-maker"
-    - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py"
+    - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico bmbot.py"
     - "move dist\\bmbot.exe dist\\bmbot_x%ARCH%.exe"
 
 build: off
