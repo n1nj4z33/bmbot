@@ -14,7 +14,7 @@ install:
     - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5 pyqt5-tools"
     # Some hack here
     - "%PYTHON%\\Scripts\\pip install git+https://github.com/n1nj4z33/sample-market-maker"
-    - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico bmbot.py"
+    - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py"
     - "move dist\\bmbot.exe dist\\bmbot-%ARCH%.exe"
 
 build: off
