@@ -11,6 +11,7 @@ matrix:
         - image=ubuntu:bionic
 
   before_install:
+    - pip install --upgrade setuptools
     - pip install -r requirements.txt
   
   install: true
