@@ -15,7 +15,8 @@ matrix:
     - pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py
     - move dist\bmbot dist\bmbot-linux-x64
   
-  script: echo Done
+script:
+  - python --version
 
 deploy:
   provider: releases
