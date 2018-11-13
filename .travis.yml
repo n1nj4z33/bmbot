@@ -1,8 +1,31 @@
 language: python
 python:
   - "3.7"
-dist: xenial
-install:
-  - pip install pyinstaller
-script:
-  - python --version
+
+matrix:
+  include:
+    - os: linux
+      sudo: required
+      services: docker
+      env:
+        - image=ubuntu:bionic
+
+  install:
+    - pip install git+https://github.com/n1nj4z33/sample-market-maker
+    - pip install pyinstaller PyQt5
+  
+  script:
+    - pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py
+    - move dist\bmbot dist\bmbot-linux-x64
+
+deploy:
+  provider: releases
+  api_key:
+    secure: xqm2pYuE11THFvZ0WRTs3BhMDJgWptxkrFekv6Ep1Is=
+  file:
+    - dist/bmbot-linux-x64
+  file_glob: true
+  on:
+    repo: n1nj4z33/bmbot
+    tags: true
+  skip_cleanup: true
