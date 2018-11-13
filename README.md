@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/travis/n1nj4z33/bmbot.svg?label=Linux%20build%20%40%20Travis%20CI)](https://travis-ci.org/n1nj4z33/bmbot)
 
-Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/n1nj4z33/bmbot?branch=master&retina=true)](https://ci.appveyor.com/project/n1nj4z33/bmbot/branch/master)
+[![Build Status](https://img.shields.io/appveyor/ci/n1nj4z33/bmbot.svg?label=Windows%20build%20%40%20Appveyor)](https://travis-ci.org/n1nj4z33/bmbot)
 
 # bmbot
 - Скачиваешь python 3 https://www.python.org/downloads/
