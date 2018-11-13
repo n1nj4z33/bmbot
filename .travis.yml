@@ -21,7 +21,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: xqm2pYuE11THFvZ0WRTs3BhMDJgWptxkrFekv6Ep1Is=
+    secure: VOVRN/x5Ulzxx+UehdUVKchl0vbb7A6NZDxQNbJHytIZmRSuP1sbGAdGP17d/wwu
   file:
     - dist/bmbot-linux-x64
   file_glob: true
