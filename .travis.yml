@@ -27,5 +27,5 @@ deploy:
   file_glob: true
   on:
     repo: n1nj4z33/bmbot
-    tags: true
+    #tags: true
   skip_cleanup: true
