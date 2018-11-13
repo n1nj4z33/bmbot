@@ -19,6 +19,11 @@ install:
 
 build: off
 
+skip_branch_with_pr: true
+
+only_commits:
+  message: /build/
+
 artifacts:
     - path: "dist\\bmbot-%ARCH%.exe"
 
