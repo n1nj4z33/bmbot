@@ -10,20 +10,24 @@ matrix:
       env:
         - image=ubuntu:bionic
 
-  install:
+  before_install:
     - pip install -r requirements.txt
-    - pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py
-    - move dist\bmbot dist\bmbot-linux-x64
+  
+  install: true
   
 script:
   - python --version
+
+before_deploy:
+  - pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py
+  - move dist/bmbot dist/bmbot-linux-x64
 
 deploy:
   provider: releases
   api_key:
     secure: $GITHUB_TOKEN
   file:
-    - dist/bmbot-linux-x64
+    - "dist/bmbot-linux-x64"
   file_glob: true
   on:
     repo: n1nj4z33/bmbot
