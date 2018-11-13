@@ -11,7 +11,7 @@ init:
 
 install:
     - "%PYTHON%\\python.exe --version"
-    - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5 pyqt5-tools"
+    - "%PYTHON%\\Scripts\\pip install pyinstaller PyQt5"
     # Some hack here
     - "%PYTHON%\\Scripts\\pip install git+https://github.com/n1nj4z33/sample-market-maker"
     - "%PYTHON%\\Scripts\\pyinstaller --onefile --icon=icon.ico --noconsole bmbot.py"
