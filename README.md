@@ -1,4 +1,4 @@
-Linux: [![Build Status](https://travis-ci.org/n1nj4z33/bmbot.svg?branch=master)](https://travis-ci.org/n1nj4z33/bmbot)
+[![Build Status](https://travis-ci.org/n1nj4z33/bmbot.svg?branch=master?label=Linux%20build%20%40%20Travis%20CI)](https://travis-ci.org/n1nj4z33/bmbot)
 
 Windows: [![Build status](https://ci.appveyor.com/api/projects/status/github/n1nj4z33/bmbot?branch=master&retina=true)](https://ci.appveyor.com/project/n1nj4z33/bmbot/branch/master)
 
