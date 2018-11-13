@@ -21,7 +21,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: VOVRN/x5Ulzxx+UehdUVKchl0vbb7A6NZDxQNbJHytIZmRSuP1sbGAdGP17d/wwu
+    secure: $GITHUB_TOKEN
   file:
     - dist/bmbot-linux-x64
   file_glob: true
