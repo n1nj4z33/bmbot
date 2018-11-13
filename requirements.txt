@@ -1,3 +1,4 @@
+git+https://github.com/pypa/setuptools.git
 pyinstaller
 PyQt5
 git+https://github.com/n1nj4z33/sample-market-maker
